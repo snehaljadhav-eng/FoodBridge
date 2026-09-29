@@ -1,0 +1,29 @@
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  line-height: 1.6;
+}
+
+.badge-positive {
+  background: #dcefe0;
+  color: var(--forest-dark);
+}
+.badge-info {
+  background: #e4e9de;
+  color: var(--ink);
+}
+.badge-warning {
+  background: #fbe9cf;
+  color: #8a5a10;
+}
+.badge-danger {
+  background: var(--clay-soft);
+  color: var(--clay);
+}
+.badge-neutral {
+  background: #ececec;
+  color: var(--ink-soft);
+}

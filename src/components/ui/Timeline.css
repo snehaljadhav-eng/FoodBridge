@@ -1,0 +1,63 @@
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline li {
+  position: relative;
+  display: flex;
+  gap: 14px;
+  padding-bottom: 22px;
+  padding-left: 2px;
+}
+
+.timeline li:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: relative;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--sage-line);
+  background: var(--surface);
+  flex-shrink: 0;
+}
+
+.timeline li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 18px;
+  bottom: 0;
+  width: 2px;
+  background: var(--sage-line);
+}
+
+.timeline-done .timeline-marker {
+  border-color: var(--forest);
+  background: var(--forest);
+}
+
+.timeline-done:not(:last-child)::before {
+  background: var(--forest);
+}
+
+.timeline-label {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.timeline-pending .timeline-label {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.timeline-time {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}

@@ -1,0 +1,35 @@
+.assignment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.assignment-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.assignment-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.assignment-meta {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.assignment-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .assignment-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

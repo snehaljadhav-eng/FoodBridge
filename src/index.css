@@ -1,0 +1,143 @@
+/* ---------------------------------------------------------
+   FoodBridge design tokens
+   Palette: warm harvest greens + amber, not the generic
+   cream/terracotta AI-default. Editorial serif for headings,
+   plain grotesk for interface text.
+--------------------------------------------------------- */
+:root {
+  --ink: #1b2318;
+  --ink-soft: #4b5347;
+  --canvas: #f7f6f1;
+  --surface: #ffffff;
+  --sage: #e4e9de;
+  --sage-line: #cfd8c5;
+  --forest: #1f4d3a;
+  --forest-dark: #163829;
+  --amber: #e8a33d;
+  --amber-dark: #c9861f;
+  --clay: #c1542c;
+  --clay-soft: #f3e0d6;
+
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --container: 1120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  color: var(--ink);
+}
+
+p {
+  margin: 0 0 1em;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Reusable form controls, shared by Create Donation and future forms */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.field .hint {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.field input,
+.field select,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 10px 12px;
+  border: 1px solid var(--sage-line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+}

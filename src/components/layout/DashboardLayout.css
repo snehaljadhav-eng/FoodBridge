@@ -1,0 +1,25 @@
+.dashboard-shell {
+  display: flex;
+  min-height: 100vh;
+  background: var(--canvas);
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 40px 44px 60px;
+  max-width: 1100px;
+}
+
+.dashboard-header {
+  margin-bottom: 32px;
+}
+
+.dashboard-header h1 {
+  font-size: 1.9rem;
+}
+
+@media (max-width: 860px) {
+  .dashboard-main {
+    padding: 28px 20px 48px;
+  }
+}
